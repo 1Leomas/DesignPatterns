@@ -47,26 +47,17 @@ public sealed class PartyMusicPlayer
         Console.WriteLine("Music player volume: {0}", _volume);
     }
 
-    public void MusicPlayerState()
+    public void CheckMusicPlayerStatus()
     {
         Console.WriteLine();
-        Console.WriteLine("-------");
-        Console.WriteLine("Music player state:");
+        Console.WriteLine("-------Music-player-state-------");
         _musicDisk.CurrentPlay();
         MusicPlayerVolume();
-        Console.WriteLine("-------");
+        Console.WriteLine("--------------------------------");
     }
 
-    public void ChangeSong()
+    public void PlayNextSong()
     {
-        _musicDisk.SongList();
-
-        Console.WriteLine("Enter number of the song you want to play");
-        Console.Write("Input: ");
-        var index = int.Parse(Console.ReadLine());
-
-        _musicDisk.ChangeCurrentPlay(index);
-
-
+        _musicDisk.PlayNextSong();
     }
 }

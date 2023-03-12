@@ -35,13 +35,14 @@ public class MusicDisk
         Console.WriteLine("Current play: {0}", _currentPlay);
     }
 
-    public void ChangeCurrentPlay(int index)
+    public void PlayNextSong()
     {
-        if (index < 0 || index > _playList.Count)
-        {
-            Console.WriteLine("Bad input");
-            return;
-        }
+        var indexOfCurrentPlay = _playList.IndexOf(_currentPlay);
+        var indexOfLast = _playList.Count - 1;
+
+        var index = (indexOfCurrentPlay == indexOfLast)
+            ? 0
+            : indexOfCurrentPlay + 1;
 
         _currentPlay = _playList[index];
     }
