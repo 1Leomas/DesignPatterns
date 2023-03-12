@@ -1,6 +1,4 @@
-﻿using Singleton;
-
-namespace DesignPatterns;
+﻿namespace Singleton;
 
 public sealed class PartyMusicPlayer
 {
@@ -12,7 +10,7 @@ public sealed class PartyMusicPlayer
         get => _volume;
     }
 
-    private MusicDisk _musicDisk;
+    private readonly MusicDisk _musicDisk;
 
     private PartyMusicPlayer()
     {
@@ -44,9 +42,9 @@ public sealed class PartyMusicPlayer
             _volume--;
     }
 
-    public void LogVolume()
+    public void MusicPlayerVolume()
     {
-        Console.WriteLine("Volume: {0}", _volume);
+        Console.WriteLine("Music player volume: {0}", _volume);
     }
 
     public void MusicPlayerState()
@@ -55,7 +53,7 @@ public sealed class PartyMusicPlayer
         Console.WriteLine("-------");
         Console.WriteLine("Music player state:");
         _musicDisk.CurrentPlay();
-        LogVolume();
+        MusicPlayerVolume();
         Console.WriteLine("-------");
     }
 

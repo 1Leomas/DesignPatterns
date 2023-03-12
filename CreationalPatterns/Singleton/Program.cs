@@ -1,12 +1,22 @@
-﻿using DesignPatterns;
+﻿using Singleton;
 
+var party = new Party();
 
-var musicPlayer1 = PartyMusicPlayer.Instance;
+party.Persons.Add(new Person("Ion"));
+party.Persons.Add(new Person("Danu"));
 
-musicPlayer1.IncreaseVolume();
+Console.WriteLine("Persons at party:");
+foreach (var p in party.Persons)
+{
+    Console.WriteLine("Name: {0}", p.Name);
+}
+Console.WriteLine();
 
-musicPlayer1.MusicPlayerState();
+party.Persons[0].MusicPlayer.MusicPlayerVolume();
+party.Persons[0].MusicPlayer.IncreaseVolume();
+party.Persons[0].MusicPlayer.MusicPlayerVolume();
+Console.WriteLine();
 
-musicPlayer1.ChangeSong();
-
-musicPlayer1.MusicPlayerState();
+party.Persons[1].MusicPlayer.DecreaseVolume();
+party.Persons[1].MusicPlayer.DecreaseVolume();
+party.Persons[1].MusicPlayer.MusicPlayerVolume();
