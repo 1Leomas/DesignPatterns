@@ -17,7 +17,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StructuralPatterns", "Struc
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BehavioralPatterns", "BehavioralPatterns", "{BB9BC455-DCCC-417D-931B-0198C3008C78}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractFactory", "CreationalPatterns\AbstractFactory\AbstractFactory.csproj", "{52661116-A056-423C-BAD3-DD7B03595C97}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbstractFactory", "CreationalPatterns\AbstractFactory\AbstractFactory.csproj", "{52661116-A056-423C-BAD3-DD7B03595C97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrototypeWithBuilder", "CreationalPatterns\Prototype\PrototypeWithBuilder.csproj", "{0F2A3EF8-3E0E-43E1-9405-7236D88B7C80}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{52661116-A056-423C-BAD3-DD7B03595C97}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52661116-A056-423C-BAD3-DD7B03595C97}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52661116-A056-423C-BAD3-DD7B03595C97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F2A3EF8-3E0E-43E1-9405-7236D88B7C80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F2A3EF8-3E0E-43E1-9405-7236D88B7C80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F2A3EF8-3E0E-43E1-9405-7236D88B7C80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F2A3EF8-3E0E-43E1-9405-7236D88B7C80}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,6 +60,7 @@ Global
 		{4823391E-6736-444F-B46C-8EB13506A8AD} = {CDB050D0-1508-47B2-B7B6-D7DF72D45D8F}
 		{AE81EF86-815F-4DCF-BFCB-C54C2835B0D1} = {CDB050D0-1508-47B2-B7B6-D7DF72D45D8F}
 		{52661116-A056-423C-BAD3-DD7B03595C97} = {CDB050D0-1508-47B2-B7B6-D7DF72D45D8F}
+		{0F2A3EF8-3E0E-43E1-9405-7236D88B7C80} = {CDB050D0-1508-47B2-B7B6-D7DF72D45D8F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5FE9B306-CAC1-462B-BA4E-B89E5DC10E55}
