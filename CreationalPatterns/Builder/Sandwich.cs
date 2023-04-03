@@ -3,7 +3,7 @@ using Builder.Ingredients;
 
 namespace Builder;
 
-internal class Sandwich
+internal class Sandwich : ICloneable
 {
     public Sausage Sausage { get; set; }
     public Cheese Cheese { get; set; }
@@ -38,5 +38,10 @@ internal class Sandwich
             sb.AppendFormat(format, $"With {nameof(Ketchup)}");
 
         return sb.ToString();
+    }
+
+    public object Clone()
+    {
+        return MemberwiseClone();
     }
 }

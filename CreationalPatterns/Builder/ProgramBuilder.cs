@@ -11,3 +11,9 @@ var vegetarianSandwich = sandwichDirector.BuildVegetarianSandwich();
 
 Console.WriteLine("Our vegetarian sandwich have: ");
 Console.WriteLine(vegetarianSandwich);
+
+
+var s = tastySandwich.Clone();
+
+Console.WriteLine("Copy: ");
+Console.WriteLine(s);
