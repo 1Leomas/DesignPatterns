@@ -1,7 +1,7 @@
 ﻿using System.Text;
 using Builder.Ingredients;
 
-namespace Builder;
+namespace PrototypeWithBuilder;
 
 internal class Sandwich
 {
@@ -16,7 +16,16 @@ internal class Sandwich
 
     public Sandwich Clone()
     {
-        return this;
+        return new Sandwich()
+        {
+            Sausage = Sausage,
+            Cheese = Cheese,
+            Caviar = Caviar,
+            Tomatoes = Tomatoes,
+            Butter = Butter,
+            Mayonnaise = Mayonnaise,
+            Ketchup = Ketchup,
+        };
     }
 
 

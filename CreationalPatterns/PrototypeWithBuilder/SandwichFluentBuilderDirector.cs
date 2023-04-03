@@ -1,6 +1,6 @@
 ﻿using Builder.Ingredients;
 
-namespace Builder;
+namespace PrototypeWithBuilder;
 
 internal class SandwichFluentBuilderDirector
 {
