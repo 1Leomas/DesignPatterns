@@ -2,14 +2,8 @@
 
 public sealed class PartyMusicPlayer
 {
-    private static PartyMusicPlayer _instance = null!;
+    private static PartyMusicPlayer _instance;
     private short _volume = 50;
-
-    public short Volume
-    {
-        get => _volume;
-    }
-
     private readonly MusicDisk _musicDisk;
 
     private PartyMusicPlayer()
