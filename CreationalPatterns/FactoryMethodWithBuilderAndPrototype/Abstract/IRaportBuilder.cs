@@ -2,7 +2,7 @@
 
 internal interface IRaportBuilder
 {
-    IRaportBuilder CreateHeaders();
+    IRaportBuilder CreateHeader();
     IRaportBuilder CreateBody();
     IRaportBuilder CreateFooter();
     IRaport Build();

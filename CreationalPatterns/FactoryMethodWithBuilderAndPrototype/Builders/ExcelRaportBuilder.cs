@@ -31,7 +31,7 @@ internal class ExcelRaportBuilder : IRaportBuilder
         _rowLength = 3 * (raport.Headers.Count - 1) + _headersMaxLength.Sum();
     }
 
-    public IRaportBuilder CreateHeaders()
+    public IRaportBuilder CreateHeader()
     {
         var stringBuilder = new StringBuilder();
 
@@ -57,6 +57,8 @@ internal class ExcelRaportBuilder : IRaportBuilder
         stringBuilder.AppendLine();
         for (int i = 0; i < _rowLength; i++)
             stringBuilder.Append('-');
+
+        stringBuilder.AppendLine();
 
         _excelRaport.Header = stringBuilder.ToString();
 
@@ -86,8 +88,7 @@ internal class ExcelRaportBuilder : IRaportBuilder
                     stringBuilder.Append(" | ");
             }
 
-            if (i != _raport.Body.Count - 1)
-                stringBuilder.AppendLine();
+            stringBuilder.AppendLine();
         }
 
         _excelRaport.Body = stringBuilder.ToString();
@@ -113,6 +114,7 @@ internal class ExcelRaportBuilder : IRaportBuilder
     public IRaport Build()
     {
         var excelRaport = _excelRaport;
+        excelRaport.Name = _raport.Name;
 
         Reset();
 
