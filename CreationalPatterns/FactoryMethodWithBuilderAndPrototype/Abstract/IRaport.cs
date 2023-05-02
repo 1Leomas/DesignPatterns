@@ -1,6 +1,6 @@
-﻿namespace FactoryMethod.Abstract;
+﻿namespace FactoryMethodWithBuilderAndPrototype.Abstract;
 
-internal interface IRaport
+public interface IRaport
 {
     public string? Name { get; set; }
     public string ContentType { get; }

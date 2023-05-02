@@ -1,7 +1,6 @@
-﻿using FactoryMethod.Abstract;
-using FactoryMethod.Builders;
-using FactoryMethod.Entities;
-using FactoryMethod.Factories;
+﻿using FactoryMethodWithBuilderAndPrototype.Abstract;
+using FactoryMethodWithBuilderAndPrototype.Entities;
+using FactoryMethodWithBuilderAndPrototype.Factories;
 
 
 var raport = new Raport

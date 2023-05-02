@@ -1,10 +1,10 @@
-﻿using FactoryMethod.Abstract;
-using FactoryMethod.Entities;
-using System.Text;
+﻿using System.Text;
+using FactoryMethodWithBuilderAndPrototype.Abstract;
+using FactoryMethodWithBuilderAndPrototype.Entities;
 
-namespace FactoryMethod.Builders;
+namespace FactoryMethodWithBuilderAndPrototype.Builders;
 
-internal class XmlRaportBuilder : IRaportBuilder
+public class XmlRaportBuilder : IRaportBuilder
 {
     private XmlRaport _xmlRaport;
 

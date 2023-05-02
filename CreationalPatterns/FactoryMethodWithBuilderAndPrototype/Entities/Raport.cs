@@ -1,8 +1,6 @@
-﻿using FactoryMethod.Abstract;
+﻿namespace FactoryMethodWithBuilderAndPrototype.Entities;
 
-namespace FactoryMethod.Entities;
-
-internal class Raport
+public class Raport
 {
     public string? Name { get; set; }
     public List<string> Headers { get; set; }

@@ -1,8 +1,8 @@
-﻿using FactoryMethod.Entities;
+﻿using FactoryMethodWithBuilderAndPrototype.Entities;
 
-namespace FactoryMethod.Abstract;
+namespace FactoryMethodWithBuilderAndPrototype.Abstract;
 
-internal interface IRaportFactory
+public interface IRaportFactory
 {
     IRaport CreateRaport(Raport raport);
 }

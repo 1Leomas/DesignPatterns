@@ -1,12 +1,10 @@
-﻿using System.Text;
-using System.Xml.Linq;
-using FactoryMethod.Abstract;
-using FactoryMethod.Builders;
-using FactoryMethod.Entities;
+﻿using FactoryMethodWithBuilderAndPrototype.Abstract;
+using FactoryMethodWithBuilderAndPrototype.Builders;
+using FactoryMethodWithBuilderAndPrototype.Entities;
 
-namespace FactoryMethod.Factories;
+namespace FactoryMethodWithBuilderAndPrototype.Factories;
 
-internal class ExcelRaportFactory : IRaportFactory
+public class ExcelRaportFactory : IRaportFactory
 {
     public IRaport CreateRaport(Raport raport)
     {

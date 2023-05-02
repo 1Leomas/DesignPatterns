@@ -1,8 +1,8 @@
-﻿using FactoryMethod.Abstract;
+﻿using FactoryMethodWithBuilderAndPrototype.Abstract;
 
-namespace FactoryMethod.Entities;
+namespace FactoryMethodWithBuilderAndPrototype.Entities;
 
-internal class PdfRaport : IRaport
+public class PdfRaport : IRaport
 {
     public string? Name { get; set; }
     public string ContentType { get; set; }

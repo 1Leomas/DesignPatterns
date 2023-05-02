@@ -1,12 +1,11 @@
-﻿using FactoryMethod.Abstract;
-using FactoryMethod.Builders;
-using FactoryMethod.Entities;
+﻿using FactoryMethodWithBuilderAndPrototype.Abstract;
+using FactoryMethodWithBuilderAndPrototype.Builders;
+using FactoryMethodWithBuilderAndPrototype.Entities;
 
-namespace FactoryMethod.Factories;
+namespace FactoryMethodWithBuilderAndPrototype.Factories;
 
-internal class PdfRaportFactory : IRaportFactory
+public class PdfRaportFactory : IRaportFactory
 {
-
     public IRaport CreateRaport(Raport raport)
     {
         IRaportBuilder builder = new PdfRaportBuilder(raport);

@@ -1,8 +1,8 @@
-﻿using FactoryMethod.Abstract;
+﻿using FactoryMethodWithBuilderAndPrototype.Abstract;
 
-namespace FactoryMethod.Entities;
+namespace FactoryMethodWithBuilderAndPrototype.Entities;
 
-internal class ExcelRaport : IRaport
+public class ExcelRaport : IRaport
 {
     public string? Name { get; set; }
     public string ContentType { get; set; }

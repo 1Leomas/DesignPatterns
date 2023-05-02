@@ -1,6 +1,6 @@
-﻿namespace FactoryMethod.Abstract;
+﻿namespace FactoryMethodWithBuilderAndPrototype.Abstract;
 
-internal interface IRaportBuilder
+public interface IRaportBuilder
 {
     IRaportBuilder CreateHeader();
     IRaportBuilder CreateBody();
