@@ -1,9 +1,11 @@
-﻿namespace SingleResponsibilityPrinciple;
+﻿using SingleResponsibilityPrinciple.Abstract;
 
-internal class Checkout
+namespace SingleResponsibilityPrinciple; 
+
+internal class Checkout: ICheckoutService
 {
-    public float GetShoppingCardPrice(ShoppingCart shoppingCart)
+    public float GetShoppingCartPrice(IShoppingCart shoppingCart)
     {
-        return shoppingCart.Items.Sum(x => x.Price);
+        return shoppingCart.GetItems().Sum(x => x.GetPrice());
     }
 }

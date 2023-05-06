@@ -1,17 +1,22 @@
-﻿namespace SingleResponsibilityPrinciple;
+﻿using SingleResponsibilityPrinciple.Abstract;
 
-internal class ShoppingCart
-{
-    private List<Product> _items = new List<Product>();
+namespace SingleResponsibilityPrinciple;
 
-    public IReadOnlyCollection<Product> Items => _items;
+internal class ShoppingCart: IShoppingCart
+{       
+    private readonly List<IProduct> _items = new();
 
-    public void AddProduct(Product product)
+    public IReadOnlyCollection<IProduct> GetItems()
+    {
+        return _items;
+    }
+
+    public void AddProduct(IProduct product)
     {
         _items.Add(product);
     }
 
-    public void RemoveProduct(Product product)
+    public void RemoveProduct(IProduct product)
     {
         _items.Remove(product);
     }

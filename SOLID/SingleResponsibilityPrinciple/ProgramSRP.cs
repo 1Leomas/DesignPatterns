@@ -1,14 +1,15 @@
-﻿using Org.BouncyCastle.Bcpg;
-using SingleResponsibilityPrinciple;
-
-var products = new List<Product>
+﻿using SingleResponsibilityPrinciple;
+using SingleResponsibilityPrinciple.Abstract;
+using SingleResponsibilityPrinciple.Products;
+    
+var products = new List<IProduct>()
 {
-    new() { Name = "Laptop", Price = 23100 },
-    new() { Name = "Phone", Price = 6400 },
-    new() { Name = "Mouse", Price = 540 }
+    new Laptop("Laptop", 23100),
+    new Phone("Phone", 6400),
+    new Mouse("Mouse", 540)
 };
 
-var shoppingCart = new ShoppingCart();
+IShoppingCart shoppingCart = new ShoppingCart();
 
 shoppingCart.AddProduct(products[0]);
 shoppingCart.AddProduct(products[1]);
@@ -17,13 +18,13 @@ shoppingCart.AddProduct(products[2]);
 shoppingCart.RemoveProduct(products[2]);
 
 Console.WriteLine("Shopping card items:");
-foreach (var item in shoppingCart.Items)
+foreach (var item in shoppingCart.GetItems())
 {
     Console.WriteLine(item);
     Console.WriteLine();
 }
 
-var checkout = new Checkout();
+ICheckoutService checkout = new Checkout();
 
-var totalPrice = checkout.GetShoppingCardPrice(shoppingCart);
+var totalPrice = checkout.GetShoppingCartPrice(shoppingCart);
 Console.WriteLine("Total price to pay: {0}", totalPrice);
