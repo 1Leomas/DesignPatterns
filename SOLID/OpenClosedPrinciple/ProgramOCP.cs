@@ -1,4 +1,5 @@
 ﻿using OpenClosedPrinciple;
+using OpenClosedPrinciple.SortMethods;
 using System.Diagnostics;
 
 const int n = 20000;

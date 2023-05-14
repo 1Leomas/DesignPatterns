@@ -1,4 +1,4 @@
-﻿namespace OpenClosedPrinciple;
+﻿namespace OpenClosedPrinciple.Abstract;
 
 internal interface ISort
 {

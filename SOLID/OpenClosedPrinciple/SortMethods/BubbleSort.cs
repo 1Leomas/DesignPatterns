@@ -1,4 +1,6 @@
-﻿namespace OpenClosedPrinciple;
+﻿using OpenClosedPrinciple.Abstract;
+
+namespace OpenClosedPrinciple.SortMethods;
 
 internal class BubbleSort : ISort
 {

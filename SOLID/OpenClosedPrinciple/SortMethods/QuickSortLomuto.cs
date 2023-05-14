@@ -1,6 +1,8 @@
-﻿namespace OpenClosedPrinciple;
+﻿using OpenClosedPrinciple.Abstract;
 
-internal class QuickSortLomuto: ISort
+namespace OpenClosedPrinciple.SortMethods;
+
+internal class QuickSortLomuto : ISort
 {
     public static void Sort(int[] toSort)
     {

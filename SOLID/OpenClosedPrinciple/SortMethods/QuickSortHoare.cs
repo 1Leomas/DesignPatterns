@@ -1,6 +1,8 @@
-﻿namespace OpenClosedPrinciple;
+﻿using OpenClosedPrinciple.Abstract;
 
-internal class QuickSortHoare: ISort
+namespace OpenClosedPrinciple.SortMethods;
+
+internal class QuickSortHoare : ISort
 {
     public static void Sort(int[] toSort)
     {
