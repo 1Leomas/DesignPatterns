@@ -1,7 +1,7 @@
 ﻿using Mediator.Components;
 using Mediator.Mediator;
 
-var generalChat = new CollegeGeneralChat();
+var generalChat = new UniversityGeneralChat();
 
 var ion = new Student("Ion T"); 
 var danu = new Student("Danu R");

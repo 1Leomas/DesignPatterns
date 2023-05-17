@@ -2,7 +2,7 @@
 
 namespace Mediator.Mediator;
 
-internal class CollegeGeneralChat: ICollegeChat
+internal class UniversityGeneralChat: IUniversityChat
 {
     private readonly List<User> _users = new();
 
@@ -14,11 +14,8 @@ internal class CollegeGeneralChat: ICollegeChat
         
     public void Send(string from, string message)
     {
-        _users.ForEach(u =>
-        {
-            if(u.Name != from) 
-                u.Receive(from, message);
-        });
+        _users.ForEach(u => 
+            { if(u.Name != from) u.Receive(from, message); });
     }
 
     public void SendTo<T>(string from, string message) where T : User
@@ -32,9 +29,6 @@ internal class CollegeGeneralChat: ICollegeChat
             });
     }
 
-    public void RegisterUsers(params User[] users)
-    {
-        foreach (var user in users)
-            Register(user);
-    }
+    public void RegisterUsers(params User[] users) 
+        => users.ToList().ForEach(Register);
 }

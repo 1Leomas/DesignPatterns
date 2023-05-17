@@ -2,7 +2,7 @@
 
 namespace Mediator.Mediator;
 
-internal interface ICollegeChat 
+internal interface IUniversityChat 
 {
     void Register(User user);
     void Send(string from, string message);

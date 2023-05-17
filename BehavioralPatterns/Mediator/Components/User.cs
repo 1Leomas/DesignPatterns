@@ -5,28 +5,18 @@ namespace Mediator.Components;
 internal abstract class User
 {
     public string Name { get; }
+    private IUniversityChat? _chat;
 
-    private ICollegeChat? _chat;
+    protected User(string name) => Name = name;
 
-    protected User(string name)
-    {
-        Name = name;
-    }   
-
-    public void SetChat(ICollegeChat? officeChat)
-    {
-        _chat = officeChat;
-    }
+    public void SetChat(IUniversityChat? officeChat) 
+        => _chat = officeChat;
 
     public void Send(string message)
-    {
-        _chat?.Send(Name, message);
-    }
+        => _chat?.Send(Name, message);
 
-    public void SendTo<T>(string message) where T : User
-    {
-        _chat?.SendTo<T>(Name, message);
-    }
+    public void SendTo<T>(string message) where T : User 
+        => _chat?.SendTo<T>(Name, message);
 
     public virtual void Receive(string from, string message)
     {
